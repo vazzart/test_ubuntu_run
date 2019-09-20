@@ -1,9 +1,11 @@
 import os
 import time
 from pathlib import Path
+import subprocess
 
 def run_kodi():
-    os.system('sh /home/user/kodi.sh')
+    #os.system('sh /home/user/kodi.sh')
+    subprocess.call('sh /home/user/kodi.sh', shell=True)
 
 
 def check_file(file_name):
