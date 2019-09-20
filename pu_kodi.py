@@ -30,7 +30,7 @@ def parsing(string, check_string):
         res.append(True)
     else:
         res.append(False)
-    res.append(float(lst[1]))
+    res.append(int(lst[1]))
     return res
 
 
@@ -48,7 +48,7 @@ if __name__ == "__main__":
         line = check_file(file_name)
         par_line_lst = parsing(line, check_string)
         if par_line_lst[0]:
-            if float(temp_string) < par_line_lst[1]:
+            if int(temp_string) < par_line_lst[1]:
                 run_kodi()
                 print('RUN KODI NOW')
                 write_temp(str(par_line_lst[1]))
