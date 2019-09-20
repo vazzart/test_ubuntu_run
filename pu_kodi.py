@@ -11,7 +11,12 @@ def check_file(file_name):
         lines = f.readlines()
     last_line = lines[-1]
     last_line = last_line.rstrip()
-    return last_line
+    if last_line:
+        return last_line
+    else:
+        last_line = lines[-2]
+        last_line = last_line.rstrip()
+        return last_line
 
 def read_temp():
     with open('temp_for_kodi_script', 'r') as f:
