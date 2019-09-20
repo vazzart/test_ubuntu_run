@@ -30,7 +30,8 @@ def parsing(string, check_string):
         res.append(True)
     else:
         res.append(False)
-    res.append(int(lst[1]))
+    head, sep, tail = lst[1].partition('.')
+    res.append(int(head))
     return res
 
 
