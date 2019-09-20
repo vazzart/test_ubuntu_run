@@ -2,7 +2,7 @@ import os
 import time
 from pathlib import Path
 import subprocess
-
+HOME = os.getenv('HOME')
 def run_kodi():
     os.system('sh /home/user/kodi.sh')
     #subprocess.call('sh /home/user/kodi.sh', shell=True)
