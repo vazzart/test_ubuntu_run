@@ -11,12 +11,7 @@ def check_file(file_name):
         lines = f.readlines()
     last_line = lines[-1]
     last_line = last_line.rstrip()
-    if last_line:
-        return last_line
-    else:
-        last_line = lines[-2]
-        last_line = last_line.rstrip()
-        return last_line
+    return last_line
 
 def read_temp():
     with open('temp_for_kodi_script', 'r') as f:
@@ -26,7 +21,7 @@ def read_temp():
 
 def write_temp(string):
     with open('temp_for_kodi_script', 'a') as f:
-        f.write(string + '\n')
+        f.write('\n' + string)
 
 def parsing(string, check_string):
     res = []
@@ -48,7 +43,7 @@ if __name__ == "__main__":
     if temp_file.is_file():
         pass
     else:
-        write_temp('0\n')
+        write_temp('0')
     while True:
         temp_string = read_temp()
         line = check_file(file_name)
