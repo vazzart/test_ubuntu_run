@@ -41,7 +41,7 @@ def parsing(string, check_string):
 if __name__ == "__main__":
     file_name = '/usr/share/hassio/homeassistant/for_py_script.txt'
     temp_file = Path("/home/user/temp_for_kodi_script")
-    check_string = 'start_kodi'
+    check_string = '/home/user/kodi.sh'
     if temp_file.is_file():
         pass
     else:
@@ -57,4 +57,5 @@ if __name__ == "__main__":
                 write_temp(str(par_line_lst[1]))
         time.sleep(2)
         print('OK')
+
 
